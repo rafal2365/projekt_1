@@ -2,11 +2,45 @@
 
 .dzialka
 {
+visibility: hidden;
 display: none;
 }
 
-.visible
+#dzielnice
 {
-display: initial;
+display: none;
+}
+
+#filtr_container
+{
+width: 100%;
+height: auto;
+margin: 0 auto;
+text-align: center;
+background: #828485;
+color: white;
+font-family: Arial, sans-serif;
+font-variant: small-caps;
+font-weight: 600;
+}                  
+
+#search
+{
+width: 100%;
+margin: 0 auto;
+padding: 3px;
+}
+
+#filtr
+{
+border: none;
+font-family: Arial, snas-serif;
+font-variant: small-caps;
+}
+
+#filtr select
+{
+border: none;
+padding: 2px;
 }
 
