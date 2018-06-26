@@ -12,41 +12,45 @@ include_once('top.php');
         <option value="działka">Działka</option>
         <option value="mieszkanie">Mieszkanie</option>
         <option value="dom">Dom</option>
-      </select><br /><br />
-     <!-------------------------------------------------------------->   
+      </select>
+     <!-----------RODZAJ - SPRZEDAŻ/WYNAJEM---------------------------------------------------> 
+      <select name="rodzaj" id="rodzaj_id">
+      <option value="sprzedaz">Sprzedaż</option>
+      <option value="wynajem">Wynajem</option>
+     </select>
+      
+      <br /><br />
+     <!-------------------- PUM - cokolwiek to kurwa znaczy ------------------------------------------>   
        <div class="dzialka">
         <label>PUM</label>
           <select name="pum">
           <option value="mieszkaniowy">mieszkaniowy</option>
           <option value="usługi">usługi</option>
         </select>
-     <!-------------------------------------------------------------->
+     <!-------------------KLASA GLEBY------------------------------------------->
         <label>Klasa gleby</label>
           <select name="klasa_gleby">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-     <!--------------------------------------------------------------> 
+     <!-------------------TYP - rolna/budowlana-------------------------------------------> 
       <label>Typ</label>
         <select name="typ">
           <option value="rolna">Rolna</option>
           <option value="budowlana">Budowlana</option>
         </select><br /><br />
       </div>
-     <!-------------------------------------------------------------->
-            
-     <!-------------------------------------------------------------->     
+     <!------------------POWIERZCHNIA-------------------------------------------->     
        <input name="powierzchnia_od" type="text" placeholder="Powierzchnia od" />
      <!-------------------------------------------------------------->                          
       <input name="powierzchnia_do" type="text" placeholder="Powierzchnia do" />
         <br /><br />
-     <!-------------------------------------------------------------->   
+     <!-----------------------CENA--------------------------------------->   
       <input name="cena_od" type="text" placeholder="Cena od">
-     <!-------------------------------------------------------------->   
-       <input name="cena_do" type="text" placeholder="Cena do">
+      <input name="cena_do" type="text" placeholder="Cena do">
        <br /><br /> 
-     <!-------------------------------------------------------------->   
+     <!------------------LOKALIZACJA-------------------------------------------->   
       <label>Lokalizaja</label>
         <select name="lokalizacja_1">
           <option value="n">Północ</option>

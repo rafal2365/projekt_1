@@ -1,15 +1,20 @@
 function dzialka(){
     var element = document.getElementsByClassName("dzialka");
+    var elem = document.getElementById("rodzaj_id");
+    elem.style.visibility = "hidden";
+    
     for(var i=0;i<=element.length;i++)
     {
       element[i].style.visibility = "visible";
       element[i].style.display = "initial";
     }
-    
 }
                                      
 function inne(){
     var element = document.getElementsByClassName("dzialka");
+    var elementarz = document.getElementById("rodzaj_id");
+    elementarz.style.visibility = "visible";
+    
     for(var i=0;i<=element.length;i++)
     {
       element[i].style.visibility = "hidden";
