@@ -1,1 +1,12 @@
 /* CSS Document */
+
+.dzialka
+{
+display: none;
+}
+
+.visible
+{
+display: initial;
+}
+

@@ -5,6 +5,15 @@ require_once('./include/conf.php');
 <html>
   <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="author" content="Projekt X">
   <meta name="generator" content="PSPad editor, www.pspad.com">
   <title></title>
+  <!---- JS -->
+  <script src="./js/jquery-1.8.2.min.js"></script>
+  <script src="./js/scripts.js"></script>
+  
+  <!---- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  
+  
   </head>
