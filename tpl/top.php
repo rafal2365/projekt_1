@@ -15,6 +15,10 @@ include('./include/conf.php');
   
   <!---- CSS -->
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/nieruchomosc.css">
   
   
   </head>
+  <div id="header">
+  
+  </div>

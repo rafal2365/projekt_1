@@ -1,6 +1,16 @@
 <?php
 include_once('../tpl/top.php');
 require_once('../include/conf.php');
+
+if(isset($_GET['id']))
+{
+
+include_once("../tpl/nieruchomosc.php");  
+
+} else if(!isset($_GET['id']))
+{
+
+
 $query = $_SESSION['query'];
 
   echo $query."<br />";
@@ -14,7 +24,6 @@ $query = $_SESSION['query'];
      $nieruchomosc -> setNieruchomosc($id);
 
 ?>
-<meta charset="utf-8">
 <div id="container">
 <?php
 
@@ -22,34 +31,35 @@ $query = $_SESSION['query'];
  <div id="underContainer"> 
   <div id="title">
   <?php
-  echo "id: ".$nieruchomosc -> getId()."<br />"; 
-  echo "title: ".$nieruchomosc -> getNieruchomosc_title()."<br />"; 
-  echo "typ nieruchomosci: ".$nieruchomosc -> getNieruchomosc_typNieruchomosci()."<br />";
-  echo "rodzaj transakcji: ".$nieruchomosc -> getNieruchomosc_rodzajTransakcji()."<br />";
-  echo "pum: ".$nieruchomosc -> getNieruchomosc_pum()."<br />";
-  echo "klasa gleby: ".$nieruchomosc -> getNieruchomosc_klasaGleby()."<br />";
-  echo "status: ".$nieruchomosc -> getNieruchomosc_status()."<br />";
-  echo "powierzchnia: ".$nieruchomosc -> getNieruchomosc_powierzchnia()."<br />";
-  echo "cena: ".$nieruchomosc -> getNieruchomosc_cena()."<br />";
-  echo "loaklizacja_1: ".$nieruchomosc -> getNieruchomosc_lokalizacja1()."<br />";
-  echo "lokalizacja_2: ".$nieruchomosc -> getNieruchomosc_lokalizacja2()."<br />";
-  echo "dzielnica: ".$nieruchomosc -> getNieruchomosc_dzielnica()."<br />";
-  echo "description: ".$nieruchomosc -> getNieruchomosc_description()."<br />";
-  echo "img_src: ".$nieruchomosc -> getNieruchomosc_imgSrc()."<br />";
-  echo "<hr><br /><br /><br />";
+/*-TUTAJ SĄ WSZYSTKIE FUNKCJE WYPISUJĄCE NIERUCHOMOŚCI - WYSTARCZY ODPOWIEDNIĄ FUNKCJE WSTAWIC W ODPOWIEDNIEGO DIVA------------*/
+                                                                                                                            /*|*/
+  echo "id: ".$nieruchomosc -> getId()."<br />";                                                                            /*|*/
+  echo "title: ".$nieruchomosc -> getNieruchomosc_title()."<br />";                                                         /*|*/
+  echo "typ nieruchomosci: ".$nieruchomosc -> getNieruchomosc_typNieruchomosci()."<br />";                                  /*|*/
+  echo "rodzaj transakcji: ".$nieruchomosc -> getNieruchomosc_rodzajTransakcji()."<br />";                                  /*|*/
+  echo "pum: ".$nieruchomosc -> getNieruchomosc_pum()."<br />";                                                             /*|*/
+  echo "klasa gleby: ".$nieruchomosc -> getNieruchomosc_klasaGleby()."<br />";                                              /*|*/
+  echo "status: ".$nieruchomosc -> getNieruchomosc_status()."<br />";                                                       /*|*/
+  echo "powierzchnia: ".$nieruchomosc -> getNieruchomosc_powierzchnia()."<br />";                                           /*|*/
+  echo "cena: ".$nieruchomosc -> getNieruchomosc_cena()."<br />";                                                           /*|*/
+  echo "loaklizacja_1: ".$nieruchomosc -> getNieruchomosc_lokalizacja1()."<br />";                                          /*|*/
+  echo "lokalizacja_2: ".$nieruchomosc -> getNieruchomosc_lokalizacja2()."<br />";                                          /*|*/
+  echo "dzielnica: ".$nieruchomosc -> getNieruchomosc_dzielnica()."<br />";                                                 /*|*/
+  echo "description: ".$nieruchomosc -> getNieruchomosc_description()."<br />";                                             /*|*/
+  echo "img_src: ".$nieruchomosc -> getNieruchomosc_imgSrc()."<br />";                                                      /*|*/
+  echo "<hr><br /><br /><br />";                                                                                            /*|*/
+ /*----------------------------------------------------------------------------------------------------------------------------*/ 
   ?>
+  <div>
+  <a href="wynik.php?id=<?php echo $id; ?>">Link do nieruchomosci <?php echo $nieruchomosc -> getId(); ?></a>
   </div>
   
-  <div id="img">
   
-  </div>
-  
-  <div id="description">
-  
-  </div>
- </div>
  <?php
     }
   }
+}
  ?>
+</div>
+</div>
 </div>

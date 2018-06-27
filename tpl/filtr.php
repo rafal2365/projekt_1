@@ -15,6 +15,7 @@ include_once('top.php');
       </select>
      <!-----------RODZAJ - SPRZEDAŻ/WYNAJEM---------------------------------------------------> 
       <select name="rodzaj" id="rodzaj_id">
+      <option value="" disabled selected>Wybierz</option>
       <option value="sprzedaż">Sprzedaż</option>
       <option value="wynajem">Wynajem</option>
      </select>

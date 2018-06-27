@@ -1,0 +1,23 @@
+#container
+{
+margin: 0 auto;
+padding: 0 auto;
+text-align: center;
+font-family: Arial, sans-serif;
+margin-top: 200px;
+}
+
+#title
+{
+font-family: Arail, sans-serif;
+font-variant: small-capis;
+letter-spacing: 3px;
+font-size: 20px;
+margin-bottom: 15px;
+}
+
+#desription
+{
+float: left;
+}
+
