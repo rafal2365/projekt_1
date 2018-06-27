@@ -15,7 +15,7 @@ include_once('top.php');
       </select>
      <!-----------RODZAJ - SPRZEDAŻ/WYNAJEM---------------------------------------------------> 
       <select name="rodzaj" id="rodzaj_id">
-      <option value="sprzedaz">Sprzedaż</option>
+      <option value="sprzedaż">Sprzedaż</option>
       <option value="wynajem">Wynajem</option>
      </select>
       
@@ -24,26 +24,28 @@ include_once('top.php');
        <div class="dzialka">
         <label>PUM</label>
           <select name="pum">
+          <option value="" disabled selected>Wybierz</option>
           <option value="mieszkaniowy">mieszkaniowy</option>
           <option value="usługi">usługi</option>
         </select>
      <!-------------------KLASA GLEBY------------------------------------------->
         <label>Klasa gleby</label>
           <select name="klasa_gleby">
+            <option value="" disabled selected>Wybierz</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
      <!-------------------TYP - rolna/budowlana-------------------------------------------> 
       <label>Typ</label>
-        <select name="typ">
+        <select name="status">
+          <option value="" disabled selected>Wybierz</option>
           <option value="rolna">Rolna</option>
           <option value="budowlana">Budowlana</option>
         </select><br /><br />
       </div>
      <!------------------POWIERZCHNIA-------------------------------------------->     
-       <input name="powierzchnia_od" type="text" placeholder="Powierzchnia od" />
-     <!-------------------------------------------------------------->                          
+       <input name="powierzchnia_od" type="text" placeholder="Powierzchnia od" />                         
       <input name="powierzchnia_do" type="text" placeholder="Powierzchnia do" />
         <br /><br />
      <!-----------------------CENA--------------------------------------->   
@@ -53,16 +55,19 @@ include_once('top.php');
      <!------------------LOKALIZACJA-------------------------------------------->   
       <label>Lokalizaja</label>
         <select name="lokalizacja_1">
+          <option value="" disabled selected>Wybierz</option>
           <option value="n">Północ</option>
           <option value="s">Południe</option>
           <option value="e">Wschód</option>
           <option value="w">Zachód</option>  
         </select>
         <select name="lokalizacja_2" id="lokalizacja_2" onchange="lokalizacja();">
+          <option value="" disabled selected>Wybierz</option>
           <option value="obrzeża">Obrzeża Krakowa</option>
           <option value="centrum">Centrum Krakowa</option>
         </select>
         <select name="dzielnica" id="dzielnice">
+          <option value="" disabled selected>Wybierz</option>
           <option value="1">Dzielnica I - Stare Miasto</option>
           <option value="2">Dzielnica II - Grzegórzki</option>
           <option value="3">Dzielnica III - Prądnik Czerwony</option>

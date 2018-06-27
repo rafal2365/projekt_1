@@ -10,6 +10,6 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED ^ E_WARNING);
 
 $mysql_connection = mysql_connect($host, $user, $pass) or die(mysql_error());
 mysql_select_db($base) or die(mysql_error());
-
+mysql_query("SET NAMES 'utf8'");
 
 ?>
