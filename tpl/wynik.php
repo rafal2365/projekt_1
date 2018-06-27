@@ -6,14 +6,12 @@ $query = $_SESSION['query'];
   echo $query."<br />";
   $select_sql = mysql_query($query) or die("select_sql error: ".mysql_error());
   $nieruchomosc = new nieruchomosc();
-   echo "mysql_num_rows: ".mysql_num_rows($select_sql);
   if(mysql_num_rows($select_sql) > 0)
   {
     while($r = mysql_fetch_assoc($select_sql))
     {
      $id = $r['id'];
      $nieruchomosc -> setNieruchomosc($id);
-     echo $id."<br />".$r['id'];
 
 ?>
 <meta charset="utf-8">

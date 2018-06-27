@@ -30,10 +30,10 @@ class nieruchomosc
     $this -> cena = $mysql_return['cena'];
     $this -> lokalizacja_1 = $mysql_return['lokalizacja_1'];
     $this -> lokalizacja_2 = $mysql_return['lokalizacja_2'];
-    $this -> dzielnica = $mysql_query['dzielnica'];
-    $this -> img_src = $mysql_query['img_src'];
-    $this -> description = $mysql_query['description'];
-    $this -> title = $mysql_query['title']; 
+    $this -> dzielnica = $mysql_return['dzielnica'];
+    $this -> img_src = $mysql_return['img_src'];
+    $this -> description = $mysql_return['description'];
+    $this -> title = $mysql_return['title']; 
     $this -> id = $id;
   }
   
