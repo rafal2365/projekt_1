@@ -1,6 +1,8 @@
 function dzialka(){
     var element = document.getElementsByClassName("dzialka");
     var elem = document.getElementById("rodzaj_id");
+    var elementX = document.getElementById("filtr_container");
+    elementX.style.height = "550px";
     elem.style.visibility = "hidden";
     
     for(var i=0;i<=element.length;i++)

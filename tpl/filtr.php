@@ -15,7 +15,7 @@ include_once('top.php');
       </select>
      <!-----------RODZAJ - SPRZEDAŻ/WYNAJEM---------------------------------------------------> 
       <select name="rodzaj" id="rodzaj_id">
-      <option value="" disabled selected>Wybierz</option>
+      <option value="" disabled selected>Sprzedaż/Wynajem</option>
       <option value="sprzedaż">Sprzedaż</option>
       <option value="wynajem">Wynajem</option>
      </select>
@@ -25,14 +25,14 @@ include_once('top.php');
        <div class="dzialka">
         <label>PUM</label>
           <select name="pum">
-          <option value="" disabled selected>Wybierz</option>
+          <option value="" disabled selected>PUM</option>
           <option value="mieszkaniowy">mieszkaniowy</option>
           <option value="usługi">usługi</option>
         </select>
      <!-------------------KLASA GLEBY------------------------------------------->
         <label>Klasa gleby</label>
           <select name="klasa_gleby">
-            <option value="" disabled selected>Wybierz</option>
+            <option value="" disabled selected>Klasa gleby</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -40,7 +40,7 @@ include_once('top.php');
      <!-------------------TYP - rolna/budowlana-------------------------------------------> 
       <label>Typ</label>
         <select name="status">
-          <option value="" disabled selected>Wybierz</option>
+          <option value="" disabled selected>Rolna/budowlana</option>
           <option value="rolna">Rolna</option>
           <option value="budowlana">Budowlana</option>
         </select><br /><br />
