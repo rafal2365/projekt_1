@@ -8,6 +8,7 @@ include_once('top.php');
   <a class="navbar-brand" href=""></a>
      <img src="img/logo-test.png" alt="Logo" class="logo"/>
   <!-- Links -->
+  
    <ul class="navbar-nav ml-auto" >
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Grunty inwestycyjne</a>
@@ -33,9 +34,7 @@ include_once('top.php');
             <a class="nav-link text-dark" href="#">Kontakt</a>
        </li>
      </ul>      
-</nav>   
- <div class="row">
-    <div class="col-sm-12">   
+</nav>      
  <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -81,8 +80,7 @@ include_once('top.php');
 
 </div>
 </div>
-        </div>
-     </div>
+   
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
