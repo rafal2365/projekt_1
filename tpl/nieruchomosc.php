@@ -38,29 +38,113 @@ $nieruchomosc -> setNieruchomosc($id);
 $imgSrc = "../img/".$id."/";
 ?>
 
-<div id="container">
-  <div id="title">
-    <?php echo $nieruchomosc -> getNieruchomosc_title(); ?>
-  </div>
-  <div id="galeria">
-    <?php galeria();?>
-  </div>
-  <div id="id01" style="z-index:3; padding-top:10%; position:fixed; left:0; top:0; width:100%; height:100%; overflow:auto;background-color:rgb(0,0,0); background-color:rgba(0,0,0,0.4);"> 
-              <div style="margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:650px;">
-      <div>
-        <span onclick="document.getElementById('id01').style.display='none'" style="float: right; color: gray; cursor: pointer; margin-right: 1%;">&times;</span><br />
-        <?php
-       //wywołujemy main_foto dla ustawionego $foto_id; 
-        main_foto($foto_id);
-        ?> 
-      </div>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Krakowskie Inwestycje (alpha)</title>
+        
+        <!----- CSS ----------------------------------------->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link rel="stylesheet" href="../css/style.css">
+        
+        <!------- JS ---------------------------------------------->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/scripts.js"></script>
+<div class="container-fluid">
+ <nav class="navbar navbar-expand-sm bg-light fixed-top ">
+  <!-- Brand -->
+     <img src="./img/logo-test.png" alt="Logo" class="img-fluid"/>
+  <!-- Links -->
+   <ul class="navbar-nav ml-auto" >
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Grunty inwestycyjne</a>
+            <div class="dropdown-menu ">
+            <a class="dropdown-item" href="#">Działki budowlane</a>
+            <a class="dropdown-item" href="#">Działki rolne</a>
+            </div>
+        </li> 
+       <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Mieszkania i lokale użytkowe</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mieszkania: wynajem</a>
+                <a class="dropdown-item" href="#">Mieszkania: sprzedaż</a>
+                <a class="dropdown-item" href="#">Dom: wynajem</a>
+                <a class="dropdown-item" href="#">Dom: sprzedaż</a>
+                <a class="dropdown-item" href="#">Lokale usługowe: wynajem</a>
+                <a class="dropdown-item" href="#">Lokale usługowe: sprzedaż</a>
+            </div>
+        </li> 
+       <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Zapytania</a>
+       </li>
+       <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Nasz zespół</a>
+       </li>
+       <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Kontakt</a>
+       </li>
+     </ul>      
+</nav>     
     </div>
+<div class="container fluid">
+<div class="row">
+    <div class="col-sm-4">
+        <?php 
+            include_once('filtr.php');
+        ?>
     </div>
-  <div id="description">
-   <?php echo $nieruchomosc -> getNieruchomosc_description(); ?>
-   <br />
-  <label id="cena"><?php echo $nieruchomosc -> getNieruchomosc_cena(); ?></label> 
+    <div class="col-sm-8">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../img/1.jpg" alt="0">
+        <div class="carousel-caption">
+            <h3>Kraków</h3>
+        <p>Małopolskie miasto inwestycji!</p>
   </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/2.jpg" alt="1">
+         <div class="carousel-caption">
+            <h3>Kraków</h3>
+        <p>Małopolskie miasto inwestycji!</p>       
+        </div>
+    </div>    
+    <div class="carousel-item">
+      <img src="../img/3.jpg" alt="2">
+        <div class="carousel-caption">
+            <h3>Kraków</h3>
+        <p>Małopolskie miasto inwestycji!</p>        
+    </div>
+        
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
 </div>
-
-
+</div>
+    </div>
+    </div>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Footer</p>
+    
+</div>
+    </body>

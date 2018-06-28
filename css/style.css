@@ -1,4 +1,43 @@
 /* CSS Document */
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
 .fakeimg {
   height: 200px;
   background: #aaa;
@@ -7,11 +46,11 @@
     width: 100px;
     height: 50px;
 }
-img{
+
+#demo img{
     width: 100%;
     height: 600px;
 }
-
 
 
 
@@ -33,20 +72,6 @@ display: none;
 display: none;
 }
 
-#filtr_container
-{
-width: 100%;
-height: auto;
-min-height: 400px;
-margin: 0 auto;
-text-align: center;
-background: #828485;
-color: white;
-font-family: Arial, sans-serif;
-font-variant: small-caps;
-font-weight: 600;
-}                  
-
 #search
 {
 width: 100%;
@@ -54,49 +79,9 @@ margin: 0 auto;
 padding: 3px;
 }
 
-#filtr
-{
-border: none;
-font-family: Arial, snas-serif;
-font-variant: small-caps;
-}
-
-#filtr select
-{
-border: none;
-padding: 2px;
-font-family: Arial, sans-serif;
-font-size: 17px;
-margin-bottom: 5px;
-border-radius: 5px;
-float: left;
-width: 100%;
-}
-
-#filtr input
-{
-border: none;
-padding: 5px;
-font-family: Arial, sans-serif;
-font-size: 17px;
-border-radius: 5px;
-width: 100%;
-margin-bottom: 5px;
-float: left;
-}
-
-#filtr input[type="submit"]
-{
-font-variant: small-caps;
-} 
-
 #header
 {
 width: 100%;
 height: 200px;
 background: #e1e1e1;
 }
-
-
-
-

@@ -10,9 +10,9 @@ include_once('../include/conf.php');
         <title>Krakowskie Inwestycje (alpha)</title>
         
         <!----- CSS ----------------------------------------->
-        <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/nieruchomosc.css">
+        <link rel="stylesheet" href="./css/style.css">
         
         <!------- JS ---------------------------------------------->
         <script src="./js/jquery.min.js"></script>
