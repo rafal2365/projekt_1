@@ -16,6 +16,10 @@ class nieruchomosc
   public $description;
   public $title;
   public $id;
+  public $pietro;
+  public $liczba_pieter;
+  public $rodzaj_budynku;
+  public $rok_budowy;
   
   public function setNieruchomosc($id){
     $mysql_query = mysql_query("SELECT * FROM nieruchomosci WHERE id = '$id'") or die("mysql_query error: ".mysql_error());
@@ -35,6 +39,26 @@ class nieruchomosc
     $this -> description = $mysql_return['description'];
     $this -> title = $mysql_return['title']; 
     $this -> id = $id;
+    $this -> pietro = $mysql_return['pietro'];
+    $this -> liczba_pieter = $mysql_return['liczba_pieter'];
+    $this -> rodzaj_budynku = $mysql_return['rodzaj_budynku'];
+    $this -> rok_budowy = $mysql_return['rok_budowy'];
+  }
+  
+  public function getNieruchomosc_pietro(){
+    return $this -> pietro;
+  }
+  
+  public function getNieruchomosc_liczbaPieter(){
+    return $this -> liczba_pieter;
+  }
+  
+  public function getNieruchomosc_rodzajBudynku(){
+    return $this -> rodzaj_budynku;
+  }
+  
+  public function getNieruchomosc_rokBudowy(){
+    return $this -> rok_budowy;
   }
   
   public function getNieruchomosc_typNieruchomosci(){

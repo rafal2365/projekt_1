@@ -38,20 +38,44 @@
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
 }
+ /* Style all font awesome icons */
+.fa {
+    padding: 5px;
+    float: right;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+} 
+
 .fakeimg {
   height: 200px;
   background: #aaa;
-}
-.logo{
-    width: 100px;
-    height: 50px;
 }
 
 #demo img{
     width: 100%;
     height: 600px;
 }
-
 
 
 /*DORZUCAM TO CO BYŁO U MNIE POD TYM KOMENTEM*/
@@ -85,3 +109,47 @@ width: 100%;
 height: 200px;
 background: #e1e1e1;
 }
+
+#filtr
+{
+font-family: Arial, sans-serif;
+}
+
+#filtr select
+{
+width: 100%;
+}
+
+#filtr input
+{
+width: 100%;
+}
+
+#filtr input[type="submit"]
+{
+font-variant: small-caps;
+font-size: 20px;
+font-weight: 600;
+}
+
+.link
+{
+color: black;
+text-decoration: none;
+}
+
+
+.link:hover
+{
+color: black;
+text-decoration: none;
+}
+
+
+
+
+
+
+
+
+

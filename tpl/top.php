@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED ^ E_WARNING);
 include_once('./include/conf.php');
 include_once('../include/conf.php');
 ?>
@@ -11,6 +12,7 @@ include_once('../include/conf.php');
         
         <!----- CSS ----------------------------------------->
         <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../css/nieruchomosc.css">
         <link rel="stylesheet" href="./css/style.css">
         

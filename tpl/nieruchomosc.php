@@ -3,37 +3,16 @@ include_once('../tpl/top.php');
 require_once('../include/conf.php');
 $id = $_GET['id'];
 
-//ustawiamy foto_id dla zdjecia;
-        if(isset($_GET['foto_id']))
-        $foto_id = $_GET['foto_id'];
-        else $foto_id = 0;
-
-if(isset($_GET['display']))
-$display_php = $_GET['display'];
-else if(!isset($_GET['display']))
-$display_php = 0;
 ?>        
-                   <script>
-    <?php echo "var display_js = $display_php;\n" ?>
-function display(){
-        if(display_js == 1)
-        {        
-          document.getElementById("id01").style.display = "block";
-        } 
-         else if(display_js == 0)
-         {
-         document.getElementById("id01").style.display = "none";
-         }
-}
-         </script>
-        
-        
+                  
 
-<body onload='display()'>
+<body>
 
 <?php
 $nieruchomosc = new nieruchomosc();
 $nieruchomosc -> setNieruchomosc($id);
+
+
 
 $imgSrc = "../img/".$id."/";
 ?>
@@ -54,27 +33,24 @@ $imgSrc = "../img/".$id."/";
 <div class="container-fluid">
  <nav class="navbar navbar-expand-sm bg-light fixed-top ">
   <!-- Brand -->
-     <img src="./img/logo-test.png" alt="Logo" class="img-fluid"/>
+     <a class="navbar-brand" href=""><img src="#" alt="Logo"></a>
   <!-- Links -->
    <ul class="navbar-nav ml-auto" >
-        <li class="nav-item dropdown">
+ 
+       <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Mieszkania i lokale użytkowe</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Wynajem</a>
+                <a class="dropdown-item" href="#">Sprzedaż</a>
+            </div>
+        </li> 
+            <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Grunty inwestycyjne</a>
             <div class="dropdown-menu ">
             <a class="dropdown-item" href="#">Działki budowlane</a>
             <a class="dropdown-item" href="#">Działki rolne</a>
             </div>
-        </li> 
-       <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Mieszkania i lokale użytkowe</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Mieszkania: wynajem</a>
-                <a class="dropdown-item" href="#">Mieszkania: sprzedaż</a>
-                <a class="dropdown-item" href="#">Dom: wynajem</a>
-                <a class="dropdown-item" href="#">Dom: sprzedaż</a>
-                <a class="dropdown-item" href="#">Lokale usługowe: wynajem</a>
-                <a class="dropdown-item" href="#">Lokale usługowe: sprzedaż</a>
-            </div>
-        </li> 
+        </li>
        <li class="nav-item">
             <a class="nav-link text-dark" href="#">Zapytania</a>
        </li>
@@ -87,14 +63,20 @@ $imgSrc = "../img/".$id."/";
      </ul>      
 </nav>     
     </div>
-<div class="container fluid">
+<div class="container-fluid">
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-12 text-center bg-light">
+    <h1><?php echo $nieruchomosc -> getNieruchomosc_title(); ?></h1> 
+    <p>Lokalizacja: <?php echo ucwords($lokalizacja1[$nieruchomosc -> getNieruchomosc_lokalizacja1()]); ?>, <?php echo $lokalizacja2[$nieruchomosc -> getNieruchomosc_lokalizacja2()]; ?>, <?php echo $dzielnica[$nieruchomosc -> getNieruchomosc_dzielnica()]; ?>
+    
+    
+    </p></div>
+    <div class="col-sm-3 bg-light text-center">
         <?php 
             include_once('filtr.php');
         ?>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-9 bg-light">
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -107,29 +89,16 @@ $imgSrc = "../img/".$id."/";
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../img/1.jpg" alt="0">
-        <div class="carousel-caption">
-            <h3>Kraków</h3>
-        <p>Małopolskie miasto inwestycji!</p>
-  </div>
+      <img src="../img/1.jpg" alt="0" class="img-fluid">
     </div>
     <div class="carousel-item">
-      <img src="../img/2.jpg" alt="1">
-         <div class="carousel-caption">
-            <h3>Kraków</h3>
-        <p>Małopolskie miasto inwestycji!</p>       
-        </div>
+      <img src="../img/2.jpg" alt="1" class="img-fluid">
     </div>    
     <div class="carousel-item">
-      <img src="../img/3.jpg" alt="2">
-        <div class="carousel-caption">
-            <h3>Kraków</h3>
-        <p>Małopolskie miasto inwestycji!</p>        
-    </div>
+      <img src="../img/3.jpg" alt="2" class="img-fluid">
         
 
   </div>
-
   <!-- Left and right controls -->
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
@@ -141,10 +110,32 @@ $imgSrc = "../img/".$id."/";
 </div>
 </div>
     </div>
+    <div class="col-sm-3 bg-light"></div>
+    <div class="col-sm-6 bg-light" style="text-align: justify; padding-top: 20px;">
+    <?php
+    echo $nieruchomosc -> getNieruchomosc_description();
+    ?>
     </div>
+<?php
+
+if($nieruchomosc -> getNieruchomosc_typNieruchomosci() == "działka")
+{
+  include_once('dzialka.php');
+}
+else
+{
+  include_once('budynek.php');  
+}
+
+
+?>
     </div>
-    <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
-    
+<div class="row">
+    <div class="col-sm-12 text-center bg-light">
+    <h1>FOOTER</h1>
+<a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+    </div>
 </div>
+    </div>
     </body>

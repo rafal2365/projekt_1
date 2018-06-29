@@ -7,7 +7,7 @@ $nieruchomosc -> setNieruchomosc($id);
 
 ?>
 
-<div class="col-sm-3">
+<div class="col-sm-3 bg-light">
   <a href="./tpl/wynik.php?id=<?php echo $id; ?>">
       <h2><?php echo $nieruchomosc -> getNieruchomosc_title(); ?></h2>
       <h5>Title description, Dec 7, 2017</h5>

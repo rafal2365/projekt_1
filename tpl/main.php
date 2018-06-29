@@ -6,8 +6,8 @@ include_once('top.php');
 <div class="container-fluid">
  <nav class="navbar navbar-expand-sm bg-light fixed-top ">
   <!-- Brand -->
-  <a class="navbar-brand" href=""></a>
-     <img src="img/logo-test.png" alt="Logo" class="logo"/>
+  <a class="navbar-brand" href="./index.php"><img src="#" alt="Logo"></a>
+    
   <!-- Links -->
    <ul class="navbar-nav ml-auto" >
         <li class="nav-item dropdown">
@@ -86,16 +86,16 @@ include_once('top.php');
 </div>
 </div>
 
-<div class="jumbotron jumbotron-fluid text-center">
+<div class="jumbotron jumbotron-fluid text-center bg-light">
   <div class="container">
     <h1>Krakowskie Inwestycje</h1>      
     <p>Funt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
   </div>
 </div>
     
-<div class="container">
+
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3 bg-light text-center">
     
     <!-------------  TU BYM WSADZIŁ FILTR WYSZUKIWANIA - wrzuciłem twoje w komenta i wszadiłem filtr, żebyś mniej więcej widział o co mi chodzi ---------------------------------------->
       <!--
@@ -111,7 +111,7 @@ include_once('top.php');
 <?php include_once('./tpl/filtr.php'); ?>  
      
     </div>
-    <!------------- PĘTLĄ WYPISUJEMY POGLĄDOWE NIERUCHOMOŚCI Z TEGO WZGLĘDU, ŻE PHP UZUPEŁNIA TO Z BAZY I PO PROSTU ILOŚĆ KODU KTÓRY MUSIOAŁBY SIĘ TUT ZNALEŹĆ BYŁABY ZBYT DUŻA. POZA TYM BEZ SENSU JEST KILKA RAZY TO SAMO WSTAWIAĆ JAK FOR ZROBI TO ZA NAS. NO I DOCHODZI JESZCZE PROSTOTA. MOŻNA NP. ZROBIĆ ZMIENNĄ j, KTÓRA BĘDZIE PRZECHOWYWAĆ ILOŚĆ WYŚWIETLANYCH POZYCJI. WARTOŚĆ ZMIENNEJ j  POBIERANA JEST Z BAZY, Z TABELI NP. KONFIGURACJA. POTEM W PANELU ADMINISTRACYJNYM STRONY TYLKO USTAWIASZ ILOŚĆ PODGLĄDÓW I SKRYPT ZAPISUJE TO W BAZIE. ;d ------------------------------------------------>
+
     <?php 
     for($i=0;$i<3;$i++)
     {
@@ -122,11 +122,14 @@ include_once('top.php');
     <!----------------------------------------------------------------------------------------------->
     
   </div>
-</div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
-    
+
+<div class="row">
+    <div class="col-sm-12 text-center bg-light">
+    <h1>FOOTER</h1>
+<a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+    </div>
 </div>
  <?php
  include_once('bottom.php');

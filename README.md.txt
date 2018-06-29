@@ -15,6 +15,9 @@ w niej kolumny - wszystkie kryteria, tj.
   12. img_src - ścieżka do folderu ze zdjęciami
   13. id - oczywiście na początku
   
+Na serwerze:  
+  
+functions.php - ścieżka bezwzgędna do wynik.php;
   
   
    

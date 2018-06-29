@@ -51,7 +51,7 @@ include_once('top.php');
       <input name="cena_do" class="form-control mr-sm-2 mb-2 mb-sm-0" type="text" placeholder="Cena do (zł)">
        <br /><br /> 
      <!------------------LOKALIZACJA-------------------------------------------->   
-      <label>Lokalizaja</label>
+      <label>Lokalizaja</label><br />
         <select name="lokalizacja_1" class="form-control">
           <option value="" disabled selected>Wybierz</option>
           <option value="n">Północ</option>
