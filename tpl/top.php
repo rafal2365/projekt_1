@@ -23,3 +23,41 @@ include_once('../include/conf.php');
         <script src="./js/scripts.js"></script>
         <script src="../js/scripts.js"></script>
     </head>
+    <body>
+    <div class="container-fluid">
+ <nav class="navbar navbar-expand-sm bg-light fixed-top ">
+  <!-- Brand -->
+  <a class="navbar-brand" href="./index.php"><img src="#" alt="Logo"></a>
+    
+  <!-- Links -->
+   <ul class="navbar-nav ml-auto" >
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Grunty inwestycyjne</a>
+            <div class="dropdown-menu ">
+            <a class="dropdown-item" href="#">Działki budowlane</a>
+            <a class="dropdown-item" href="#">Działki rolne</a>
+            </div>
+        </li> 
+       <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Mieszkania i lokale użytkowe</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mieszkania: wynajem</a>
+                <a class="dropdown-item" href="#">Mieszkania: sprzedaż</a>
+                <a class="dropdown-item" href="#">Dom: wynajem</a>
+                <a class="dropdown-item" href="#">Dom: sprzedaż</a>
+                <a class="dropdown-item" href="#">Lokale usługowe: wynajem</a>
+                <a class="dropdown-item" href="#">Lokale usługowe: sprzedaż</a>
+            </div>
+        </li> 
+       <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Zapytania</a>
+       </li>
+       <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Nasz zespół</a>
+       </li>
+       <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Kontakt</a>
+       </li>
+     </ul>      
+</nav> 
+    </div>

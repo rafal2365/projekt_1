@@ -1,7 +1,3 @@
-<?php
-include_once('top.php');
-?>
-
 <body>
  <div id="filtr_container">
     <div id="search">
@@ -91,6 +87,3 @@ include_once('top.php');
       </form>
     </div>
  </div>
- <?php
- include_once('bottom.php');
- ?>

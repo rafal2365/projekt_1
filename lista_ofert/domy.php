@@ -1,6 +1,25 @@
 <?php
-include_once('top.php');
+include_once('./tpl/top.php');
+
+$domy_sql = mysql_query("SELECT * FROM nieruchomosci WHERE typ_nieruchomosci = 'dom'") or die("domy_sql error: ".mysql_error());
+
+$nieruchomosc = new nieruchomosc();
+
 ?>
+<style>
+#typ_wyszukiwania
+{
+display: none;
+}
+
+#rodzaj_id
+{
+display: initial;
+visibility: visible;
+}
+
+</style>
+
 
 <body>
 
@@ -60,13 +79,26 @@ include_once('top.php');
 
   <div class="row">
     <div class="col-sm-3 bg-light text-center">
+    
+<?php include_once('./tpl/filtr.php'); ?>  
      
     </div>
 
     <?php 
-    for($i=0;$i<3;$i++)
+    while($r = mysql_fetch_assoc($domy_sql))
     {
-      include("./tpl/podglad.php");
+      $nieruchomosc -> setNieruchomosc($r['id']);
+      ?>
+      <div class="col-sm-3 bg-light">
+  <a href="./tpl/wynik.php?id=<?php echo $id; ?>">
+      <h2><?php echo $nieruchomosc -> getNieruchomosc_title(); ?></h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg"><?php echo $nieruchomosc -> getNieruchomosc_imgSrc(); ?></div>
+      <p>Some text..</p>
+      <p><?php echo substr($nieruchomosc -> getNieruchomosc_description(),0,150)."..."; ?></p>
+  </a>
+    </div>
+   <?php 
     }
     ?>
     
@@ -76,5 +108,5 @@ include_once('top.php');
 
 
  <?php
- include_once('bottom.php');
+ include_once('./tpl/bottom.php');
  ?>

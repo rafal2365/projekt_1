@@ -1,14 +1,9 @@
 <?php
 session_start();
 
-function filtruj(){
+function filtruj($typ_nieruchomosci){
 
   $wh = array();
-  
-  if(!empty($_POST['typ_wyszukiwania']))
-  {
-    $wh[] = 'typ_nieruchomosci = '.'"'.$_POST['typ_wyszukiwania'].'"';
-  }
   
   if(!empty($_POST['rodzaj']))
   {
@@ -67,9 +62,9 @@ function filtruj(){
   
   if (!empty($wh)) {
    $where = 'WHERE '.implode(' and ', $wh);
-   $_SESSION['query'] = 'SELECT * FROM nieruchomosci '.$where.' ORDER BY id DESC';
+   $_SESSION['query'] = "SELECT * FROM nieruchomosci ".$where." AND typ_nieruchomosci = '".$typ_nieruchomosci."' ORDER BY id DESC";
    } else {
-    $_SESSION['query'] = 'SELECT * FROM nieruchmosci ORDER BY id DESC';
+    $_SESSION['query'] = "SELECT * FROM nieruchmosci WHERE typ_nieruchomosci = '".$typ_nieruchomosci."' ORDER BY id DESC";
    }
    header('Location: ./tpl/wynik.php');    
 }

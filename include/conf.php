@@ -6,7 +6,12 @@ require_once('galeria.php');
 
 if(isset($_POST['filtruj']))
 {
-  filtruj();
+  $typ_nieruchomosci = array(
+    "1" => "działka",
+    "2" => "mieszkanie",
+    "3" => "dom"
+  );
+  filtruj($typ_nieruchomosci[$_GET['oferta']]);
 }
 
 $lokalizacja1 = array(
