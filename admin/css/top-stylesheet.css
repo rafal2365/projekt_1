@@ -1,0 +1,27 @@
+/* CSS Document */
+
+#header_container
+{
+width: 100%;
+height: auto;
+min-height: 100px;
+background-color: #eee;
+padding: 0 auto;
+margin: 0 auto;
+text-align: center;
+}
+
+#header_top
+{
+font-family: Arial, sans-serif;
+font-size: 50px;
+font-variant: small-caps;
+letter-spacing: 5px;
+color: #e1e1e1;
+}
+
+#header_top span
+{
+color: #9FA3A6;
+}
+

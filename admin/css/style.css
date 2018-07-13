@@ -1,0 +1,402 @@
+/* CSS Document */
+body,html
+{
+font-family: Arial, sans-serif;
+height: auto;
+}
+
+#main_container
+{
+width: 100%;
+height: auto;
+margin: 0 auto;
+padding: 0 auto;
+text-align: center;
+}
+
+#container
+{
+width: 100%;
+height: auto;
+min-height: 500px;
+margin: 0 auto;
+padding: 0 auto;
+text-align: center;
+}
+
+#container span
+{
+font-size: 20px;
+}
+
+#top_info
+{
+float: left;
+font-size: 15px;
+font-family: Arial, sans-serif;
+font-variant: small-caps;
+letter-spacing: 2px;
+background: #717375;
+color: #fff;
+width: 100%;
+font-weight: 600;
+}
+
+#top_info span
+{
+float: left;
+}
+
+#top_info label
+{
+color: #e1e1e1;
+}
+
+#top_info a
+{
+float: right;
+font-size: 20px;
+text-decoration: none;
+color: #e1e1e1;
+}
+
+#top_info a:hover
+{
+opacity: 0.5;
+}
+
+/*-- MENU ------------------------------------------------------------------*/
+
+#navigation
+{
+margin: 0 auto;
+padding: 0 auto;
+width: 100%;
+background: #e1e1e1;
+}
+
+#navigation ul, li
+{
+list-style: none;
+display: inline;
+padding: 2px;
+margin: 1px;
+background-color: #e1e1e1;
+}
+
+#navigation a
+{
+text-decoration: none;
+color: #617282;
+font-family: Arial, sans-serif;
+font-variant: small-caps;
+font-weight: bold;
+font-size: 18px;
+}
+
+#navigation a:hover
+{
+opacity: 0.5;
+}
+
+/*------- CONTENT - CHANGE_PASSWORD.php ----------------------------------------------*/
+
+#content
+{
+margin: 0 auto;
+padding: 0 auto;
+text-align: center;
+margin-top: 15px;
+}
+
+#content form table
+{
+margin: 0 auto;
+padding: 0 auto;
+text-align: center;
+}
+
+#content form input
+{
+border: none;
+border: 1px solid #e1e1e1;
+border-radius: 5px;
+height: 25px;
+font-size: 15px;
+}
+
+#content form input[type="submit"]
+{
+font-family: Arial, sans-serif;
+font-variant: small-caps;
+font-size: 20px;
+font-weight: 700;
+color: #e1e1e1;
+height: 30px;
+width: 100px;
+background: #717375;
+}
+
+#content form input[type="submit"]:hover
+{
+opacity: 0.5;
+cursor: pointer;
+}
+
+
+/*--- ADD.php ----------------------------------------------------------*/
+.dzialka
+{
+display: none;
+visibility: hidden;
+}
+
+#dzielnice
+{
+display: none;
+}
+
+.budynek
+{
+display: none;
+visibility: hidden;
+}
+
+.add-form table
+{
+margin: 0 auto;
+padding: 0 auto;
+}
+
+.add-form
+{
+width: 100%;
+height: auto;
+}
+
+.add-form select
+{
+font-size: 15px;
+width: 100%;
+border: 1px solid #e1e1e1;
+border-radius: 6px; 
+height: 25px;
+}
+
+.add-form input
+{
+font-size: 15px;
+width: 100%;
+border: 1px solid #e1e1e1;
+border-radius: 6px; 
+height: 25px;
+}
+
+.input-submit
+{
+height: 30px;
+max-width: 200px;
+font-family: Arial,sans-serif;
+font-variant: small-caps;
+letter-spacing: 3px;
+font-size: 18px;
+color: #e1e1e1;
+background: #717375;
+font-weight: 700;
+font-size: 18px;
+border: none;
+border-radius: 6px;
+}
+
+#previous
+{
+padding: 0 auto;
+margin: 0 auto;
+padding-bottom: 2px;
+}
+
+.input-submit:hover
+{
+opacity: 0.5;
+color: #fff;
+cursor: pointer;
+}
+
+.left
+{
+margin-left: 40%;
+}
+
+
+/*-- CSS z login.php -------------------------------------------------------------------------------------------------*/
+
+
+#login_container
+{
+padding: 0 auto;
+margin: 0 auto;
+text-align: center;
+}
+
+#login-form
+{
+margin: 0 auto;
+padding: 0 auto;
+margin-top: 30px;
+text-align: center;
+}
+
+#login_form table
+{
+margin: 0 auto;
+font-family: Arial, sans-serif;
+font-size: 20px;
+letter-spacing: 3px;
+font-variant: small-caps;
+}
+
+input[name="login-btn"]
+{
+width: 80px;
+height: auto; 
+font-size: 18px;
+font-variant: small-caps;
+}
+
+#login_error_message
+{
+width: 50%;
+margin-left: 25%;
+font-family: Arial, sans-serif;
+letter-spacing: 1px;
+background-color: #e1e1e1;
+visibility: hidden;
+}
+
+#lista li 
+{
+background:#fff;
+}
+
+/*--- PREVIEW.php -------------------------*/
+.preview
+{
+border-bottom: 2px solid black;
+margin-bottom: 2%;
+}
+
+.right
+{
+float: right;
+}
+
+/*------ MANAGE.php ------------------------------------*/
+
+.container
+{
+width: 100%;
+height: auto;
+margin: 0 auto;
+padding: 0 auto;
+border: 0.5px solid #e1e1e1;
+}
+
+
+#columns
+{
+width: 100%;
+height: auto;
+margin: 0 auto;
+padding: 0 auto;
+margin-top: 15px;
+background-color: #717375;
+}
+
+.naglowek
+{
+color: #fff;
+font-variant: small-caps;
+font-size: 20px;
+font-weight: bold;
+}
+
+#meta
+{
+float: left; 
+//width: 50%;
+margin: 0 auto;
+padding: 0 auto;
+margin-right: 20%;
+}
+
+#actions
+{
+//width: 50%;
+margin: 0 auto;
+padding: 0 auto;
+margin-left: 93%;
+}
+
+#commercial
+{
+width: 100%; 
+height: 100px;
+border-bottom: 2px solid #e1e1e1;
+margin-top: 15px;
+}
+
+#photo img
+{
+float: left;
+width: 100px;
+height: auto;
+max-height: 100px;
+}
+
+#else
+{
+float: left;
+}
+
+#else_title a
+{
+text-decoration: none;
+color: black;
+font-weight: 600;
+}
+
+#actions_buttons
+{
+float: right;
+}
+
+#actions_buttons a
+{
+text-decoration: none;
+padding: 3px;
+}
+
+.cancel
+{
+background-color: #D10217;
+}
+
+.cancel:hover
+{
+opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
